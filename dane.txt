@@ -1,0 +1,4 @@
+Temat: System magazynowy z wypożyczeniami
+Wykorzystywane technologie: JavaFX, MySQL, SceneBuilder
+Zespół: Wojciech Kozioł, Konrad Jaszczyk, Dawid Bujak
+Podział prac: ? ? ?
