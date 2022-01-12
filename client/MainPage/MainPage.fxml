@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.MainPage.MainPageController">
+   <children>
+      <ImageView fitHeight="136.0" fitWidth="214.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Home/InfMAG.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="347.0" layoutY="70.0" text="Menu główne">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="38.0" layoutY="224.0" onMouseClicked="#OpenMyAccount" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="74.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Home/users.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="41.0" layoutY="123.0" text="Moje konto">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="285.0" layoutY="224.0" onMouseClicked="#OpenRent" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="74.0" layoutX="67.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Home/laptop.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="61.0" layoutY="121.0" text="Zamów">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="527.0" layoutY="224.0" onMouseClicked="#OpenHistory" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="100.0" prefHeight="81.0" prefWidth="156.0" text="Historia zamówień" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="67.0" fitWidth="74.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Home/history.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="532.0" layoutY="24.0" text="Zalogowany użytkownik:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="loggedUser" layoutX="691.0" layoutY="24.0" prefHeight="20.0" prefWidth="98.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

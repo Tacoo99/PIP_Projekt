@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="563.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ChooseRent.LaptopController">
+   <children>
+      <ImageView fitHeight="78.0" fitWidth="82.0" layoutX="108.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Home/laptop.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="86.0" layoutY="117.0" prefHeight="78.0" prefWidth="123.0" text="Wypożycz laptopa" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="-114.0" endY="414.0" layoutX="410.0" layoutY="253.0" startX="-115.0" startY="-253.00001525878906" />
+      <AnchorPane layoutX="296.0" prefHeight="667.0" prefWidth="550.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="199.0" layoutY="94.0" prefHeight="44.0" prefWidth="223.0" text="Jaki sprzęt wybierasz? :)" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblData" layoutX="21.0" layoutY="177.0" prefHeight="391.0" prefWidth="590.0" />
+            <Button fx:id="confirm" layoutX="236.0" layoutY="595.0" mnemonicParsing="false" onMouseClicked="#confirmRent" style="-fx-background-color: white; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Potwierdź">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="360.0" layoutY="21.0" text="Zalogowany użytkownik:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="loggedUser" layoutX="522.0" layoutY="21.0" prefHeight="20.0" prefWidth="98.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="169.0" layoutY="138.0" text="Zaznacz dane urządzenie i kliknij przycisk &quot;Potwierdź&quot;" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="BackMenu" layoutX="86.0" layoutY="581.0" mnemonicParsing="false" onMouseClicked="#onBackButton" style="-fx-background-color: white; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Wróć do menu">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="68.0" layoutY="526.0" mnemonicParsing="false" onMouseClicked="#CategoryBack" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: white; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Zmień kategorię">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="producentCombo" layoutX="12.0" layoutY="210.0" prefHeight="29.0" prefWidth="123.0" promptText="Producent" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" />
+      <ComboBox fx:id="cpuCombo" layoutX="12.0" layoutY="264.0" prefHeight="29.0" prefWidth="123.0" promptText="Procesor" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" />
+      <ComboBox fx:id="gpuCombo" layoutX="151.0" layoutY="264.0" prefHeight="29.0" prefWidth="132.0" promptText="Grafika" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" />
+      <ComboBox fx:id="diskCombo" layoutX="146.0" layoutY="210.0" prefHeight="29.0" prefWidth="132.0" promptText="Typ dysku" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" />
+      <Button layoutX="103.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#searchLaptop" style="-fx-background-color: white; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Wyszukaj">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="ekranCombo" layoutX="12.0" layoutY="319.0" prefHeight="29.0" prefWidth="123.0" promptText="Ekran" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" />
+      <ComboBox fx:id="ramCombo" layoutX="151.0" layoutY="319.0" prefHeight="29.0" prefWidth="132.0" promptText="RAM" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" />
+      <Button layoutX="73.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#getAll" style="-fx-background-color: white; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Wyświetl wszystkie">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

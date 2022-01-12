@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Home.Home_ClientController">
+
+
+   <left>
+
+      <AnchorPane prefHeight="712.0" prefWidth="400.0" style="-fx-background-color: #A9A9A9;" BorderPane.alignment="CENTER">
+         <children>
+
+
+            <ImageView fitHeight="238.0" fitWidth="384.0" layoutX="8.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@InfMAG.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+
+   <right>
+      <AnchorPane prefHeight="700.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+
+            <!-- The Beginning of Logo -->
+            <ImageView fitHeight="57.0" fitWidth="101.0" layoutX="25.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cart.png" />
+               </image>
+            </ImageView>
+
+            <Label layoutX="250.0" layoutY="59.0" prefHeight="30.0" prefWidth="90.0" style="-fx-text-fill: #A9A9A9;" text="Zaloguj się">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="cancelButton" layoutX="502.0" layoutY="13.0" mnemonicParsing="false" onAction="#onCancelButtonClick" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Wyjdź">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="loginUsernameTextField" layoutX="150.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0" promptText="Nazwa użytkownika" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@users.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="loginPasswordPasswordField" layoutX="150.0" layoutY="140.0" prefHeight="30.0" prefWidth="300.0" promptText="Hasło" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </PasswordField>
+            <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@lock.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="invalidLoginCredentials" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="175.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Button fx:id="LoginButton" layoutX="252.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#onLoginButtonClick" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Zaloguj">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+
+            <Line endX="500.0" endY="380.0" fill="DARKGRAY" layoutY="-110.0" opacity="0.5" startX="100.0" startY="380.0" stroke="#a8a8a8ad" strokeLineJoin="BEVEL" strokeWidth="3.0" />
+
+
+
+            <Label layoutX="240.0" layoutY="272.0" prefHeight="36.0" prefWidth="130.0" style="-fx-text-fill: #A9A9A9;" text="Zarejestruj się">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="signUpUsernameTextField" layoutX="162.0" layoutY="324.0" prefHeight="30.0" prefWidth="300.0" promptText="Nazwa użytkownika" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="114.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@users.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="signUpEmailTextField" layoutX="159.0" layoutY="407.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="114.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@email.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="signUpPasswordPasswordField" layoutX="159.0" layoutY="447.0" prefHeight="30.0" prefWidth="300.0" promptText="Hasło" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </PasswordField>
+            <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="114.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@lock.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="signUpRepeatPasswordPasswordField" layoutX="159.0" layoutY="487.0" prefHeight="30.0" prefWidth="300.0" promptText="Powtórz hasło" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </PasswordField>
+            <CheckBox fx:id="termsConditionsCheckbox" layoutX="163.0" layoutY="538.0" mnemonicParsing="false" selected="true" style="-fx-text-fill: #A9A9A9;" text="Zapoznałem się z zasadami i warunkami">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="invalidSignupCredentials" alignment="CENTER" contentDisplay="CENTER" layoutX="162.0" layoutY="577.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Button fx:id="signUpButton" layoutX="240.0" layoutY="601.0" mnemonicParsing="false" onAction="#onSignUpButtonClick" prefHeight="33.0" prefWidth="130.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Załóż konto">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="240.0" layoutY="648.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Zasady i warunki" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="signUpNameTextField" layoutX="165.0" layoutY="366.0" prefHeight="30.0" prefWidth="135.0" promptText="Imię" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="signUpSurnameTextField" layoutX="315.0" layoutY="366.0" prefHeight="30.0" prefWidth="149.0" promptText="Nazwisko" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="96.0" layoutY="29.0" text="INFMAG" textFill="#24a0ed">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+
+
+         </children>
+      </AnchorPane>
+   </right>
+
+   <bottom>
+
+      <Label prefHeight="16.0" prefWidth="107.0" style="-fx-text-fill: #B9a9a9;" text="INFMAG © 2021" BorderPane.alignment="CENTER" />
+   </bottom>
+
+</BorderPane>
